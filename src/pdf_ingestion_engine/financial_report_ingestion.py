@@ -120,8 +120,12 @@ class financial_report(p2.PdfFileReader):
 
         print(highest_nest_lst)
 
-
         print(self.getNumPages())
+
+        '''
+        # TODO: Solve issue of mismatch between actual page numbers and
+        Destination page numbers.
+        '''
         # Nested method that parses a list of destiation dicts and gives them page ranges:
         def get_dest_prange(nest_lst):
             '''
@@ -149,6 +153,7 @@ class financial_report(p2.PdfFileReader):
                 variables described above
             '''
 
+            # TODO: develop an accurate way to assign dest dicts page numbers.
 
 # Test:
 financial_report('tests/test_pdfs/ExxonMobil 2019 10-K Report.pdf')
